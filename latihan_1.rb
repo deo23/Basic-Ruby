@@ -1,3 +1,4 @@
+require 'Date'
 # Super class Vehicle
 class Vehicle
 
@@ -22,7 +23,7 @@ module OldtimerCheck
     def isOldtimer?(year)
 
         # .to_i for converting year(string) to integer
-        year.to_i < 1992
+        year.to_i < Date.today.year - 30
     end
 end
 
